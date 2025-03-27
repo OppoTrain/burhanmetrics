@@ -22,7 +22,6 @@ const Hero = () => {
                     اتخاذ قرارات توظيف مستنيرة عبر تقييم المهارات وتوفير رؤى
                     دقيقة لتحسين عملية التوظيف وبناء فرق عمل فعالة
                 </p>
-                    className="cursor-pointer text-lg px-5 py-2 md:px-8 md:py-3 bg-white border-3 border-[#366585] rounded-2xl text-[#366585] hover:bg-[#366585] hover:text-white transition w-[155px]"
                 <Link href={"/#register"}>
                     <button className="cursor-pointer text-lg px-5 py-2 md:px-8 md:py-3 bg-white border-3 border-[#366585] rounded-2xl text-[#366585] hover:bg-[#366585] hover:text-white transition w-[155px]">
                         سجل الان
