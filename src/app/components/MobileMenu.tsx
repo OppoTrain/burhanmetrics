@@ -1,17 +1,13 @@
 "use client";
+import Link from "next/link";
 import React, { useState } from "react";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 
-interface Props {
-    scrollToForm: () => void;
-}
-
-const MobileMenu = ({ scrollToForm }: Props) => {
+const MobileMenu = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleScrollToForm = () => {
-        setIsOpen(false); 
-        scrollToForm(); 
+        setIsOpen(false);
     };
 
     return (
@@ -35,12 +31,14 @@ const MobileMenu = ({ scrollToForm }: Props) => {
                     <IoMdClose size={30} />
                 </div>
                 <ul className="flex flex-col p-6 space-y-4 mt-12">
-                    <button
-                        className="px-6 py-3 cursor-pointer bg-white border-3 border-[#366585] rounded-2xl text-[#366585] hover:bg-[#366585] hover:text-white transition"
-                        onClick={handleScrollToForm}
-                    >
-                        سجل الان
-                    </button>
+                    <Link href={"/#register"}>
+                        <button
+                            className="px-6 py-3 cursor-pointer bg-white border-3 border-[#366585] rounded-2xl text-[#366585] hover:bg-[#366585] hover:text-white transition"
+                            onClick={handleScrollToForm}
+                        >
+                            سجل الان
+                        </button>
+                    </Link>
                     <button
                         className="px-4 py-2 bg-[#DAECFD66] text-lg text-[#36658566] rounded-2xl"
                         disabled

@@ -1,19 +1,15 @@
+"use client";
 import Image from "next/image";
 import React, { useState } from "react";
 import { formSchema } from "../utils/FormSchema";
 
-import { RefObject } from "react";
 import { z } from "zod";
-import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
 
 type FormData = z.infer<typeof formSchema>;
 
-interface Props {
-    formRef: RefObject<HTMLDivElement | null>;
-}
-
-const RegisterNowForm = ({ formRef }: Props) => {
+const RegisterNowForm = () => {
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState<string | null>(null);
     const {
@@ -44,13 +40,11 @@ const RegisterNowForm = ({ formRef }: Props) => {
         try {
             const response = await fetch(apiUrl, {
                 method: "POST",
-                mode: 'no-cors',
                 headers: {
                     "Content-Type": "text/plain;charset=utf-8",
                 },
                 body: JSON.stringify(data),
             });
-
             if (response.ok) {
                 setMessage("تم إرسال البيانات بنجاح!");
             } else {
@@ -64,10 +58,7 @@ const RegisterNowForm = ({ formRef }: Props) => {
         }
     };
     return (
-        <div
-            ref={formRef}
-            className="flex-row items-center justify-center max-w-[1240px] mx-auto px-4 py-12"
-        >
+        <div className="flex-row items-center justify-center max-w-[1240px] mx-auto px-18 py-24 md:px-4 md:py-12">
             <div className="w-full text-center mb-6">
                 <h1 className="font-bold text-[24px] md:text-[42px] text-[#366585] font-inter">
                     إنضم إلينا الان
@@ -87,10 +78,11 @@ const RegisterNowForm = ({ formRef }: Props) => {
                     />
                 </div>
 
-                <div className="w-full md:w-1/2 flex flex-col gap-4 bg-[#DAECFD] shadow-lg rounded-lg p-6 md:shadow-none md:bg-white">
+                <div className="w-full md:w-1/2 flex flex-col gap-4 bg-[#DAECFD] shadow shadow-[#00000040] rounded-3xl p-6 md:shadow-none md:bg-white">
                     <form
                         className="space-y-4"
                         onSubmit={handleSubmit(onSubmit)}
+                        id="register"
                     >
                         <label
                             htmlFor="email"
