@@ -33,14 +33,14 @@ const MobileMenu = () => {
                 <ul className="flex flex-col p-6 space-y-4 mt-12">
                     <Link href={"/#register"}>
                         <button
-                            className="px-6 py-3 cursor-pointer bg-white border-3 border-[#366585] rounded-2xl text-[#366585] hover:bg-[#366585] hover:text-white transition"
+                            className="w-full px-4 py-2 cursor-pointer bg-white border-3 border-[#366585] rounded-2xl text-[#366585] text-lg"
                             onClick={handleScrollToForm}
                         >
                             سجل الان
                         </button>
                     </Link>
                     <button
-                        className="px-4 py-2 bg-[#DAECFD66] text-lg text-[#36658566] rounded-2xl"
+                        className="w-full px-4 py-2 bg-[#DAECFD66] text-lg text-[#36658566] rounded-2xl"
                         disabled
                     >
                         حساب جديد

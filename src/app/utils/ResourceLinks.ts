@@ -3,5 +3,7 @@ export const ResourceLinks = {
   facebookLink: "#",
   twitterLink: "#",
   youtubeLink: "#",
+  oppoTrainLink: "https://oppotrain.com",
+  zahaaMuhannaLinkedIn: "https://www.linkedin.com/in/zahaa-muhnna/",
 };
 

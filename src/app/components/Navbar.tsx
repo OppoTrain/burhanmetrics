@@ -4,14 +4,19 @@ import Link from "next/link";
 
 const Navbar = () => {
     return (
-        <div className="bg-white flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 pt-12 text-black">
+        <div
+            id="home"
+            className="bg-white flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 pt-12 text-black"
+        >
             <div className="order-2">
-                <img
-                    src="/image/burhan-logo.png"
-                    alt="logo"
-                    loading="lazy"
-                    className="w-33 h-17 md:w-43 md:h-21"
-                />
+                <a href="#home">
+                    <img
+                        src="/image/burhan-logo.png"
+                        alt="logo"
+                        loading="lazy"
+                        className="w-33 h-17 md:w-43 md:h-21"
+                    />
+                </a>
             </div>
 
             <ul className="hidden md:flex order-1 space-x-8">

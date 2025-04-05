@@ -16,6 +16,7 @@ const RegisterNowForm = () => {
         register,
         handleSubmit,
         formState: { errors },
+        reset,
     } = useForm<FormData>({
         resolver: zodResolver(formSchema),
     });
@@ -47,6 +48,7 @@ const RegisterNowForm = () => {
             });
             if (response.ok) {
                 setMessage("تم إرسال البيانات بنجاح!");
+                reset();
             } else {
                 setMessage("حدث خطأ أثناء إرسال البيانات.");
             }
@@ -58,7 +60,10 @@ const RegisterNowForm = () => {
         }
     };
     return (
-        <div className="flex-row items-center justify-center max-w-[1240px] mx-auto px-18 py-24 md:px-4 md:py-12">
+        <div
+            id="register"
+            className="flex-row items-center justify-center max-w-[1240px] mx-auto px-18 py-24 md:px-4 md:py-12"
+        >
             <div className="w-full text-center mb-6">
                 <h1 className="font-bold text-[24px] md:text-[42px] text-[#366585] font-inter">
                     إنضم إلينا الان
@@ -82,7 +87,6 @@ const RegisterNowForm = () => {
                     <form
                         className="space-y-4"
                         onSubmit={handleSubmit(onSubmit)}
-                        id="register"
                     >
                         <label
                             htmlFor="email"

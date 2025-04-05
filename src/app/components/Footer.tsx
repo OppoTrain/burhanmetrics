@@ -38,16 +38,38 @@ const Footer = () => {
                 </div>
 
                 <p className="text-sm text-[#0A142F] text-center">
-                    © 2025 All rights reserved
+                    © {new Date().getFullYear()} All rights reserved
                 </p>
 
                 <div className="flex items-center justify-center">
-                    <img
-                        src="/image/burhan-logo.png"
-                        alt="Burhan Metrics Logo"
-                        className="w-30 md:w-38 md:h-19"
-                    />
+                    <a href="#home">
+                        <img
+                            src="/image/burhan-logo.png"
+                            alt="Burhan Metrics Logo"
+                            className="w-30 md:w-38 md:h-19 cursor-pointer"
+                        />
+                    </a>
                 </div>
+            </div>
+            <hr className="border-t border-[#2c5c7e] my-4" />
+
+            <div className="text-center text-sm text-[#0A142F] pb-2">
+                Powered by{" "}
+                <a
+                    href={ResourceLinks.oppoTrainLink}
+                    target="_blank"
+                    className="font-semibold hover:text-[#2c5c7e]"
+                >
+                    OppoTrain
+                </a>
+                . Designed by{" "}
+                <a
+                    href={ResourceLinks.zahaaMuhannaLinkedIn}
+                    target="_blank"
+                    className="font-semibold hover:text-[#2c5c7e]"
+                >
+                    Zahaa Muhanna
+                </a>
             </div>
         </footer>
     );
