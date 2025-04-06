@@ -1,9 +1,19 @@
 import React from "react";
-import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
+import {
+    FaFacebookF,
+    FaTwitter,
+    FaInstagram,
+    FaYoutube,
+    FaLinkedinIn,
+} from "react-icons/fa";
 import { ResourceLinks } from "../utils/ResourceLinks";
 
 const Footer = () => {
     const footerLinks = [
+        {
+            icon: <FaLinkedinIn size={16} />,
+            link: ResourceLinks.linkedInLink,
+        },
         {
             icon: <FaFacebookF size={16} />,
             link: ResourceLinks.facebookLink,
@@ -42,7 +52,7 @@ const Footer = () => {
                 </p>
 
                 <div className="flex items-center justify-center">
-                    <a href="#home">
+                    <a href="#">
                         <img
                             src="/image/burhan-logo.png"
                             alt="Burhan Metrics Logo"

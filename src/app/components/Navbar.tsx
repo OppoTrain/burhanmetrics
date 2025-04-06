@@ -4,12 +4,9 @@ import Link from "next/link";
 
 const Navbar = () => {
     return (
-        <div
-            id="home"
-            className="bg-white flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 pt-12 text-black"
-        >
+        <div className="bg-white flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 pt-12 text-black">
             <div className="order-2">
-                <a href="#home">
+                <a href="#">
                     <img
                         src="/image/burhan-logo.png"
                         alt="logo"
